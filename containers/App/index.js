@@ -19,7 +19,6 @@ class App extends Component {
   render () {
     return (
       <main>
-        <h1>{this.props.ui.text}</h1>
         { this.props.group.map(function (unit, index) {
           return <Unit key={index} unit={unit} />;
         }) }
@@ -30,9 +29,7 @@ class App extends Component {
 
 App.propTypes = {
   group: PropTypes.arrayOf(PropTypes.object),
-  ui: PropTypes.shape({
-    text: PropTypes.string
-  })
+  ui: PropTypes.object
 };
 App.defaultProps = {};
 
