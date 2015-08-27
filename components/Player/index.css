@@ -1,0 +1,18 @@
+.Player {
+  background-color: #fff;
+  border: 1px solid #000;
+  margin: 0 .5em .5em 0;
+  padding: .25em;
+  width: 100%;
+}
+
+.Player__CastBar {
+  width: 100%;
+}
+
+.Player__Name {}
+
+.Player__Spell {
+  min-height: 44px;
+  min-width: 44px;
+}

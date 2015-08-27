@@ -1,0 +1,17 @@
+.Team {
+  padding: 1em;
+  height: 50vh;
+  width: 100%;
+}
+
+.Team--Enemies {
+  background-color: hsl(0, 50%, 70%);
+}
+
+.Team--Friendlies {
+  background-color: hsl(100, 50%, 70%);
+}
+
+.Team__Name {
+  font-size: 1.5rem;
+}

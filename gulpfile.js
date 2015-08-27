@@ -29,11 +29,15 @@ gulp.task('serve', ['default'], function () {
     }
   });
 
-  gulp.watch(['./index.css', './components/**/*.css'], ['build:css']);
+  gulp.watch([
+    './index.css',
+    './components/**/*.css',
+    './containers/**/*.css'
+  ], ['build:css']);
   gulp.watch([
     './index.js',
-    './containers/**/*.js',
     './components/**/*.js',
+    './containers/**/*.js',
     './lib/**/*.js',
     './utils/**/*.js'
   ], ['build:js']);

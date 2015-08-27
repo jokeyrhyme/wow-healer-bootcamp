@@ -2,6 +2,10 @@
 
 @import url(containers/App/index.css);
 @import url(containers/Root/index.css);
+@import url(components/Boss/index.css);
+@import url(components/HealthBar/index.css);
+@import url(components/Player/index.css);
+@import url(components/Team/index.css);
 @import url(components/Unit/index.css);
 
 *, *::after, *::before {
@@ -10,4 +14,7 @@
 
 html, body {
   box-sizing: border-box;
+  height: 100vh;
+  overflow: hidden;
+  width: 100vw;
 }

@@ -1,13 +1,17 @@
-.Unit {
+.Boss {
   background-color: #fff;
   border: 1px solid #000;
-  display: inline-block;
-  height: 3em;
   margin: 0 .5em .5em 0;
   padding: .25em;
-  width: 6em;
+  width: 100%;
 }
 
-.Unit__Health {
+.Boss__CastBar {
+  width: 100%;
+}
+
+.Boss__Name {}
+
+.Boss__HealthBar {
   width: 100%;
 }

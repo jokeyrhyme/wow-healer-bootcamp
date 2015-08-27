@@ -4,14 +4,11 @@
 
 import React, { Component, PropTypes } from 'react';
 
-// this module
+// local modules
 
-const METER_PROPS = {
-  className: 'Unit__Health',
-  low: 50,
-  max: 100,
-  min: 0
-};
+import HealthBar from '../HealthBar';
+
+// this module
 
 class Unit extends Component {
   constructor (props) {
@@ -21,7 +18,9 @@ class Unit extends Component {
   render () {
     return (
       <div className='Unit'>
-        <meter {...METER_PROPS} value={this.props.unit.hp} />
+        <div className='Unit__Health'>
+          <HealthBar hp={this.props.unit.hp} />
+        </div>
       </div>
     );
   }
