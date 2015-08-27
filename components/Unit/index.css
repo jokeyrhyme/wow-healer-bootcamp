@@ -1,0 +1,12 @@
+.Unit {
+  border: 1px solid #000;
+  display: inline-block;
+  height: 3em;
+  margin: .5em;
+  padding: .25em;
+  width: 6em;
+}
+
+.Unit__Health {
+  width: 100%;
+}

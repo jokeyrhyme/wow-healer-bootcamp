@@ -5,6 +5,10 @@
 import { connect } from 'react-redux';
 import React, { Component, PropTypes } from 'react';
 
+// local modules
+
+import Unit from '../../components/Unit';
+
 // this module
 
 class App extends Component {
@@ -16,12 +20,16 @@ class App extends Component {
     return (
       <main>
         <h1>{this.props.ui.text}</h1>
+        { this.props.group.map(function (unit, index) {
+          return <Unit key={index} unit={unit} />;
+        }) }
       </main>
     );
   }
 }
 
 App.propTypes = {
+  group: PropTypes.arrayOf(PropTypes.object),
   ui: PropTypes.shape({
     text: PropTypes.string
   })

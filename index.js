@@ -6,7 +6,7 @@ import React from 'react';
 
 // local modules
 
-import Root from './containers/root';
+import Root from './containers/Root';
 
 // this module
 
