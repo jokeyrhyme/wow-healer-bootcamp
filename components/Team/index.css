@@ -1,15 +1,16 @@
 .Team {
   padding: 1em;
-  height: 50vh;
   width: 100%;
 }
 
 .Team--Enemies {
   background-color: hsl(0, 50%, 70%);
+  height: 30vh;
 }
 
 .Team--Friendlies {
   background-color: hsl(100, 50%, 70%);
+  height: 70vh;
 }
 
 .Team__Name {

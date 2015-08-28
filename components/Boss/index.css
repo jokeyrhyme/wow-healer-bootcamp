@@ -10,7 +10,9 @@
   width: 100%;
 }
 
-.Boss__Name {}
+.Boss__Name {
+  margin: .2em 0 .4em;
+}
 
 .Boss__HealthBar {
   width: 100%;

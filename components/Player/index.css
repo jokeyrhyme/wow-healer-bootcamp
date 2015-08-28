@@ -10,7 +10,9 @@
   width: 100%;
 }
 
-.Player__Name {}
+.Player__Name {
+  margin: .2em 0 .4em;
+}
 
 .Player__Spell {
   min-height: 44px;
