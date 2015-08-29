@@ -47,7 +47,7 @@ class CastBar extends Component {
       'CastBar--casting': !!this.props.spell
     });
     return (
-      <progress className={className} {...this.state} />
+      <progress className={className} {...this.state}></progress>
     );
   }
 }

@@ -20,7 +20,7 @@ class HealthBar extends Component {
 
   render () {
     return (
-      <meter {...BAR_PROPS} value={this.props.hp} />
+      <meter {...BAR_PROPS} value={this.props.hp}></meter>
     );
   }
 }
