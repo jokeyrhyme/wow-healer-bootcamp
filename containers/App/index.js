@@ -7,7 +7,7 @@ import React, { Component, PropTypes } from 'react';
 
 // local modules
 
-import { castSpell } from '../../lib/actions';
+import { castSpell, targetUnit } from '../../lib/actions';
 import Boss from '../../components/Boss';
 import Player from '../../components/Player';
 import Unit from '../../components/Unit';
@@ -25,6 +25,10 @@ class App extends Component {
     this.props.dispatch(castSpell(spellId));
   }
 
+  handleUnitClick (index) {
+    this.props.dispatch(targetUnit(index));
+  }
+
   render () {
     return (
       <main className='App'>
@@ -32,8 +36,14 @@ class App extends Component {
           <Boss />
         </section>
         <section className='Team Team--Friendlies'>
-          { this.props.group.map(function (unit, index) {
-            return <Unit key={index} unit={unit} />;
+          { this.props.group.map((unit, index) => {
+            let props = {
+              isTarget: this.props.player.target === index,
+              key: index,
+              onClick: () => { this.handleUnitClick(index); },
+              unit
+            };
+            return <Unit {...props} />;
           }) }
           <Player player={this.props.player} onSpellClick={this.handleSpellClick} />
         </section>

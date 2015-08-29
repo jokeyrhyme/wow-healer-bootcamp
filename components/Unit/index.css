@@ -8,6 +8,10 @@
   width: 6em;
 }
 
+.Unit--target {
+  outline: .2em solid gold;
+}
+
 .Unit__Health {
   width: 100%;
 }
