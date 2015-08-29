@@ -21,7 +21,7 @@ class Boss extends Component {
       <div className='Boss'>
         <h1 className='Boss__Name'>Big Scary Dragon</h1>
         <div className='Boss__Health'>
-          <HealthBar hp={this.props.hp} />
+          <HealthBar hp={this.props.unit.hp} />
         </div>
         <div className='Boss__CastBar'>
           <CastBar />
@@ -32,10 +32,14 @@ class Boss extends Component {
 }
 
 Boss.propTypes = {
-  hp: PropTypes.number
+  unit: PropTypes.shape({
+    hp: PropTypes.number
+  })
 };
 Boss.defaultProps = {
-  hp: 100
+  unit: {
+    hp: 100
+  }
 };
 
 export default Boss;

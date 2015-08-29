@@ -33,7 +33,7 @@ class App extends Component {
     return (
       <main className='App'>
         <section className='Team Team--Enemies'>
-          <Boss />
+          <Boss unit={this.props.enemies[0]} />
         </section>
         <section className='Team Team--Friendlies'>
           { this.props.group.map((unit, index) => {
@@ -54,6 +54,7 @@ class App extends Component {
 
 App.propTypes = {
   dispatch: PropTypes.func.isRequired,
+  enemies: PropTypes.arrayOf(PropTypes.object),
   group: PropTypes.arrayOf(PropTypes.object),
   player: PropTypes.object,
   ui: PropTypes.object
