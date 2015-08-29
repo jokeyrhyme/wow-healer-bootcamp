@@ -20,9 +20,11 @@ class HealthBar extends Component {
 
   render () {
     return (
-      <meter {...BAR_PROPS} value={this.props.hp}></meter>
+      <progress {...BAR_PROPS} value={this.props.hp}></progress>
     );
   }
+  // we should be using <meter {...BAR_PROPS} value={this.props.hp}></meter>
+  // but Safari doesn't support it, and it can't be styled
 }
 
 HealthBar.propTypes = {
