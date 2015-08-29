@@ -7,29 +7,28 @@ import React, { Component, PropTypes } from 'react';
 // this module
 
 const BAR_PROPS = {
-  className: 'HealthBar',
-  low: 50,
+  className: 'CastBar',
   max: 100,
   min: 0
 };
 
-class HealthBar extends Component {
+class CastBar extends Component {
   constructor (props) {
     super(props);
   }
 
   render () {
     return (
-      <meter {...BAR_PROPS} value={this.props.hp} />
+      <progress {...BAR_PROPS} value='' />
     );
   }
 }
 
-HealthBar.propTypes = {
+CastBar.propTypes = {
   hp: PropTypes.number
 };
-HealthBar.defaultProps = {
+CastBar.defaultProps = {
   hp: 0
 };
 
-export default HealthBar;
+export default CastBar;

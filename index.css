@@ -3,6 +3,7 @@
 @import url(containers/App/index.css);
 /*@import url(containers/Root/index.css);*/
 @import url(components/Boss/index.css);
+@import url(components/CastBar/index.css);
 @import url(components/HealthBar/index.css);
 @import url(components/Player/index.css);
 @import url(components/Team/index.css);

@@ -6,6 +6,7 @@ import React, { Component, PropTypes } from 'react';
 
 // local modules
 
+import CastBar from '../CastBar';
 import HealthBar from '../HealthBar';
 
 // this module
@@ -28,7 +29,9 @@ class Boss extends Component {
         <div className='Boss__Health'>
           <HealthBar hp={this.props.hp} />
         </div>
-        <progress {...PROGRESS_PROPS} />
+        <div className='Boss__CastBar'>
+          <CastBar />
+        </div>
       </div>
     );
   }
