@@ -8,6 +8,7 @@ import React, { Component, PropTypes } from 'react';
 // local modules
 
 import CastBar from '../CastBar';
+import * as spells from '../../lib/game/spells';
 
 // this module
 
@@ -17,7 +18,6 @@ class Player extends Component {
   }
 
   render () {
-    global.console.log('Player#render()...');
     let { isCasting, name } = this.props.player;
     return (
       <div className='Player'>
@@ -27,16 +27,16 @@ class Player extends Component {
         </div>
         <div className='Player__Spells'>
 
-        { ['Q', 'W', 'E', 'R'].map((label) => {
+        { Object.keys(spells).map((spellId) => {
           let props = {
             className: classNames('Player__Spell', {
               'Player__Spell--disabled': isCasting
             }),
             disabled: isCasting,
-            key: label,
-            onClick: this.props.onSpellClick
+            key: spellId,
+            onClick: () => { this.props.onSpellClick(spellId); }
           };
-          return <button {...props}>{label}</button>;
+          return <button {...props}>{spellId}</button>;
         }) }
         </div>
       </div>

@@ -21,9 +21,8 @@ class App extends Component {
     this.handleSpellClick = this.handleSpellClick.bind(this);
   }
 
-  handleSpellClick () {
-    global.console.log('handleSpellClick...');
-    this.props.dispatch(castSpell());
+  handleSpellClick (spellId) {
+    this.props.dispatch(castSpell(spellId));
   }
 
   render () {
