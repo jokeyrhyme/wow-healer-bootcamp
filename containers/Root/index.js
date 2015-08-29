@@ -11,14 +11,15 @@ import React, { Component } from 'react';
 
 import App from '../App';
 import { default as configureStore } from '../../lib/configureStore';
+import encounter from '../../lib/game/encounter';
 import initialState from '../../lib/initialState';
-import { damageRandom, healRandom, populateGroup } from '../../lib/actions';
+import { damageRandom, healRandom } from '../../lib/actions';
 
 // this module
 
 const store = configureStore(initialState);
 
-store.dispatch(populateGroup());
+encounter(store.dispatch.bind(store), store.getState.bind(store));
 
 setInterval(function () {
   store.dispatch(healRandom());
