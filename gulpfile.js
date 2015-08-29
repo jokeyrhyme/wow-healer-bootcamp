@@ -2,12 +2,15 @@
 
 // foreign modules
 
+var autoprefixer = require('autoprefixer');
 var browserify = require('browserify');
 var browserSync = require('browser-sync').create();
 var buffer = require('vinyl-buffer');
+var cssnano = require('cssnano');
 var gulp = require('gulp');
 var gutil = require('gulp-util');
-var minifyCss = require('gulp-minify-css');
+var postcss = require('gulp-postcss');
+var postcssImport = require('postcss-import');
 var source = require('vinyl-source-stream');
 var sourcemaps = require('gulp-sourcemaps');
 var uglify = require('gulp-uglify');
@@ -47,9 +50,11 @@ gulp.task('serve', ['default'], function () {
 
 gulp.task('build:css', function () {
   return gulp.src(['./index.css'])
-    .pipe(sourcemaps.init())
-    .pipe(minifyCss())
-    .pipe(sourcemaps.write())
+    .pipe(postcss([
+      postcssImport(),
+      autoprefixer({ browsers: ['last 2 versions'] }),
+      cssnano()
+    ]))
     .pipe(gulp.dest('./dist/'))
     .pipe(browserSync.stream());
 });

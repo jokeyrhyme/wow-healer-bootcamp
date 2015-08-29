@@ -1,7 +1,7 @@
 @import url(node_modules/normalize.css/normalize.css);
 
 @import url(containers/App/index.css);
-@import url(containers/Root/index.css);
+/*@import url(containers/Root/index.css);*/
 @import url(components/Boss/index.css);
 @import url(components/HealthBar/index.css);
 @import url(components/Player/index.css);
