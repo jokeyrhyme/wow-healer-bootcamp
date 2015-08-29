@@ -7,6 +7,7 @@ import React, { Component, PropTypes } from 'react';
 
 // local modules
 
+import { castSpell } from '../../lib/actions';
 import Boss from '../../components/Boss';
 import Player from '../../components/Player';
 import Unit from '../../components/Unit';
@@ -16,6 +17,13 @@ import Unit from '../../components/Unit';
 class App extends Component {
   constructor (props) {
     super(props);
+
+    this.handleSpellClick = this.handleSpellClick.bind(this);
+  }
+
+  handleSpellClick () {
+    global.console.log('handleSpellClick...');
+    this.props.dispatch(castSpell());
   }
 
   render () {
@@ -28,7 +36,7 @@ class App extends Component {
           { this.props.group.map(function (unit, index) {
             return <Unit key={index} unit={unit} />;
           }) }
-          <Player />
+          <Player player={this.props.player} onSpellClick={this.handleSpellClick} />
         </section>
       </main>
     );
@@ -36,7 +44,9 @@ class App extends Component {
 }
 
 App.propTypes = {
+  dispatch: PropTypes.func.isRequired,
   group: PropTypes.arrayOf(PropTypes.object),
+  player: PropTypes.object,
   ui: PropTypes.object
 };
 App.defaultProps = {};

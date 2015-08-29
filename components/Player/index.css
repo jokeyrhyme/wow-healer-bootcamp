@@ -25,3 +25,7 @@
   min-height: 44px;
   min-width: 44px;
 }
+
+.Player__Spell--disabled {
+  opacity: .5;
+}
