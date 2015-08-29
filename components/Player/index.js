@@ -18,12 +18,12 @@ class Player extends Component {
   }
 
   render () {
-    let { isCasting, name } = this.props.player;
+    let { isCasting, name, spell } = this.props.player;
     return (
       <div className='Player'>
         <h1 className='Player__Name'>{name}</h1>
         <div className='Player__CastBar'>
-          <CastBar />
+          { spell ? <CastBar spell={spell} /> : null }
         </div>
         <div className='Player__Spells'>
 
@@ -48,7 +48,8 @@ Player.propTypes = {
   onSpellClick: PropTypes.func.isRequired,
   player: PropTypes.shape({
     isCasting: PropTypes.boolean,
-    name: PropTypes.string
+    name: PropTypes.string,
+    spell: PropTypes.object
   })
 };
 Player.defaultProps = {};
