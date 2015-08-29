@@ -11,12 +11,6 @@ import HealthBar from '../HealthBar';
 
 // this module
 
-const PROGRESS_PROPS = {
-  className: 'Boss__CastBar',
-  max: 100,
-  min: 0
-};
-
 class Boss extends Component {
   constructor (props) {
     super(props);

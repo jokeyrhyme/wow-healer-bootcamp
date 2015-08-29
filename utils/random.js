@@ -7,3 +7,7 @@ export function toNumber (min, max) {
 export function toBoolean () {
   return Math.random() >= 0.5;
 }
+
+export function toIndex (array) {
+  return toNumber(0, array.length);
+}
