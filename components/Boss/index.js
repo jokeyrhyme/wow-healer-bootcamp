@@ -2,6 +2,7 @@
 
 // foreign modules
 
+import classNames from 'classnames';
 import React, { Component, PropTypes } from 'react';
 
 // local modules
@@ -17,11 +18,17 @@ class Boss extends Component {
   }
 
   render () {
+    let { hp } = this.props.unit;
+    let props = {
+      className: classNames('Boss', {
+        'Boss--dead': hp <= 0
+      })
+    };
     return (
-      <div className='Boss'>
+      <div {...props}>
         <h1 className='Boss__Name'>Big Scary Dragon</h1>
         <div className='Boss__Health'>
-          <HealthBar hp={this.props.unit.hp} />
+          { hp > 0 ? <HealthBar hp={hp} /> : null }
         </div>
         <div className='Boss__CastBar'>
           <CastBar />

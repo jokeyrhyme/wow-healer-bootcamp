@@ -29,7 +29,8 @@ class Unit extends Component {
     let props = {
       className: classNames('Unit', {
         'Unit--target': this.props.isTarget,
-        [`Unit--${klass}`]: true
+        [`Unit--${klass}`]: true,
+        'Unit--dead': hp <= 0
       }),
       onClick: this.props.onClick
     };

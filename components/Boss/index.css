@@ -6,6 +6,11 @@
   width: 100%;
 }
 
+.Boss--dead {
+  background: #000;
+  color: #fff;
+}
+
 .Boss__CastBar {
   height: 2rem;
   width: 100%;

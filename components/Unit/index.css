@@ -9,6 +9,11 @@
   width: 6em;
 }
 
+.Unit--dead {
+  background: #000;
+  color: #fff;
+}
+
 .Unit--target {
   outline: .2em solid gold;
 }
