@@ -1,5 +1,6 @@
 .CastBar {
   appearance: none;
+  border: 0; /* Firefox / Opera have a border */
   height: 100%;
   width: 100%;
   visibility: hidden;

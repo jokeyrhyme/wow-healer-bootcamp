@@ -9,6 +9,7 @@ import React, { Component, PropTypes } from 'react';
 
 import HealthBar from '../HealthBar';
 import { HEALER, DPS, TANK } from '../../lib/values/roles';
+import CLASSES from '../../lib/values/classes';
 
 // this module
 
@@ -24,20 +25,21 @@ class Unit extends Component {
   }
 
   render () {
+    let { hp, 'class': klass, role } = this.props.unit;
     let props = {
       className: classNames('Unit', {
-        'Unit--target': this.props.isTarget
+        'Unit--target': this.props.isTarget,
+        [`Unit--${klass}`]: true
       }),
       onClick: this.props.onClick
     };
-    let { hp, role } = this.props.unit;
     return (
       <div {...props}>
         <div className='Unit__Health'>
           <label className='Unit__Role' title=''>
             {ROLE_SYMBOLS[role] || '?'}
           </label>
-          <HealthBar hp={hp} />
+          <HealthBar hp={hp} unitClass={klass} />
         </div>
       </div>
     );
@@ -49,6 +51,7 @@ Unit.propTypes = {
   onClick: PropTypes.func,
   unit: PropTypes.shape({
     hp: PropTypes.number,
+    'class': PropTypes.oneOf(CLASSES),
     role: PropTypes.oneOf(Object.keys(ROLE_SYMBOLS))
   })
 };

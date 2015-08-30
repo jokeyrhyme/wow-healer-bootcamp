@@ -1,4 +1,56 @@
 .HealthBar {
   appearance: none;
+  border: 0; /* Firefox / Opera have a border */
   width: 100%;
 }
+
+/* class-colouring: color is for IE */
+/* have to use separate selectors for -webkit and -moz or it doesn't work */
+
+.HealthBar--DEATH_KNIGHT { color: #C41E3B; }
+.HealthBar--DEATH_KNIGHT::-webkit-progress-value { background-color: #C41E3B; }
+.HealthBar--DEATH_KNIGHT::-moz-progress-bar { background-color: #C41E3B; }
+
+.HealthBar--DEMON_HUNTER { color: #4DD827; }
+.HealthBar--DEMON_HUNTER::-webkit-progress-value { background-color: #4DD827; }
+.HealthBar--DEMON_HUNTER::-moz-progress-bar { background-color: #4DD827; }
+
+.HealthBar--DRUID { color: #FF7C0A; }
+.HealthBar--DRUID::-webkit-progress-value { background-color: #FF7C0A; }
+.HealthBar--DRUID::-moz-progress-bar { background-color: #FF7C0A; }
+
+.HealthBar--HUNTER { color: #AAD372; }
+.HealthBar--HUNTER::-webkit-progress-value { background-color: #AAD372; }
+.HealthBar--HUNTER::-moz-progress-bar { background-color: #AAD372; }
+
+.HealthBar--MAGE { color: #68CCEF; }
+.HealthBar--MAGE::-webkit-progress-value { background-color: #68CCEF; }
+.HealthBar--MAGE::-moz-progress-bar { background-color: #68CCEF; }
+
+.HealthBar--MONK { color: #008467; }
+.HealthBar--MONK::-webkit-progress-value { background-color: #008467; }
+.HealthBar--MONK::-moz-progress-bar { background-color: #008467; }
+
+.HealthBar--PALADIN { color: #F48CBA; }
+.HealthBar--PALADIN::-webkit-progress-value { background-color: #F48CBA; }
+.HealthBar--PALADIN::-moz-progress-bar { background-color: #F48CBA; }
+
+.HealthBar--PRIEST { color: #FFF; }
+.HealthBar--PRIEST::-webkit-progress-value { background-color: #FFF; }
+.HealthBar--PRIEST::-moz-progress-bar { background-color: #FFF; }
+
+.HealthBar--ROGUE { color: #FFF468; }
+.HealthBar--ROGUE::-webkit-progress-value { background-color: #FFF468; }
+.HealthBar--ROGUE::-moz-progress-bar { background-color: #FFF468; }
+
+.HealthBar--SHAMAN { color: #2359FF; }
+.HealthBar--SHAMAN::-webkit-progress-value { background-color: #2359FF; }
+.HealthBar--SHAMAN::-moz-progress-bar { background-color: #2359FF; }
+
+.HealthBar--WARLOCK { color: #9382C9; }
+.HealthBar--WARLOCK::-webkit-progress-value { background-color: #9382C9; }
+.HealthBar--WARLOCK::-moz-progress-bar { background-color: #9382C9; }
+
+.HealthBar--WARRIOR { color: #C69B6D; }
+.HealthBar--WARRIOR::-webkit-progress-value { background-color: #C69B6D; }
+.HealthBar--WARRIOR::-moz-progress-bar { background-color: #C69B6D; }
