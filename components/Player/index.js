@@ -47,7 +47,7 @@ class Player extends Component {
 Player.propTypes = {
   onSpellClick: PropTypes.func.isRequired,
   player: PropTypes.shape({
-    isCasting: PropTypes.boolean,
+    isCasting: PropTypes.bool,
     name: PropTypes.string,
     spell: PropTypes.object
   })

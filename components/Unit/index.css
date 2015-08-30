@@ -16,3 +16,8 @@
 .Unit__Health {
   width: 100%;
 }
+
+.Unit__Role {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+}
